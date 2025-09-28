@@ -1,0 +1,148 @@
+
+/* Style global */
+html, body {
+    height: 100%; /* Fixe la hauteur totale */
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+/* Style spécifique pour l'en-tête */
+section {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+section:nth-child(even) {
+    background-color: #efefef;
+}
+
+section h1 {
+    font-size: 3rem; /* Taille de la police */
+    font-weight: bold; /* Gras */
+    color: #333333; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    text-transform: uppercase; /* Mettre le texte en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    margin-bottom: 20px; /* Espacement en bas */
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Dégradé de couleurs */
+    -webkit-background-clip: text; /* Appliquer le dégradé au texte uniquement */
+    -webkit-text-fill-color: transparent; /* Rendre le fond transparent */
+}
+
+section h2 {
+    font-size: 2rem; /* Taille légèrement plus petite que H1 */
+    font-weight: 600; /* Moins gras que H1 */
+    color: #555555; /* Couleur légèrement plus douce */
+    border-bottom: 4px solid #ff7e5f; /* Ligne décorative à gauche */
+    line-height: 1.5; /* Amélioration de la lisibilité */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Légère ombre portée */
+}
+
+/* Texte dans le header */
+section div {
+    flex: 1; /* Laisse cet élément occuper l'espace disponible */
+    text-align: center;
+}
+
+section p {
+    font-size: 1rem; /* Taille de police classique */
+    line-height: 1.8; /* Espacement entre les lignes pour améliorer la lisibilité */
+    color: #666666; /* Couleur douce et discrète */
+    margin-bottom: 20px; /* Espacement entre les paragraphes */
+    font-family: 'Roboto', sans-serif; /* Police moderne et lisible */
+}
+
+/* Image dans le header */
+.profil {
+    width: 40%; /* L'image occupe 40% de la largeur du header */
+    height: 100%;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 50% 100%);
+    object-fit: cover; /* S'assure que l'image est bien redimensionnée */
+}
+
+.icon {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.icon img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.icon:hover img {
+    transform: scale(1.1);
+}
+
+.hamburger {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #333;
+    border-radius: 2px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    color: white;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 9;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 15px 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar.open {
+    left: 0;
+}
