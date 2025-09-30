@@ -90,59 +90,68 @@ section p {
     transform: scale(1.1);
 }
 
-.hamburger {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 10;
-}
 
-.hamburger span {
-    display: block;
-    height: 4px;
+/* Style pour le parcours universitaire */
+.scolar {
+    flex-direction: column;
     width: 100%;
-    background: #333;
-    border-radius: 2px;
+    padding-bottom: 5%;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 250px;
-    height: 100vh;
-    background: #222;
-    color: white;
-    transition: left 0.3s ease;
-    display: flex;
+.scolar > h1 {
+    margin-bottom: 5%;
+}
+
+.scolar > article,
+.scolar > div {
+    display: flex; /* essentiel pour align-items */
+    flex: 1;
+    text-align: left;
+    align-items: center; /* centre verticalement le contenu */
+    width: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.scolar span {
+    padding-right: 5%;
+    font-size: 1.1rem; /* Taille un peu plus petite que le titre */
+    font-weight: bold; /* Mettre en valeur la période */
+    color: #555555; /* Gris foncé lisible */
+    display: block; /* Affichage en bloc pour être au-dessus du texte */
+    text-transform: uppercase; /* Dates en majuscules */
+    letter-spacing: 1px; /* Espacement léger */
+}
+
+.scolar > div {
+    flex: 3;
     flex-direction: column;
-    padding: 20px;
-    z-index: 9;
 }
 
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.scolar > div > article {
+    display: flex;
+    flex: 1;
+    text-align: left;
+    align-items: center;
+    width: auto;
+    padding-left: 10%;
+    padding-right: 5%;
 }
 
-.navbar li {
-    margin: 15px 0;
+.scolar p {
+    font-size: 1.2rem; /* Taille standard du texte */
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
+.logo {
+    margin-left: auto;
+    width: 20%;
 }
 
-.navbar.open {
-    left: 0;
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
 }
