@@ -92,28 +92,73 @@ section p {
 
 
 /* Style pour le parcours universitaire */
-.scolar {
+.logo {
+    margin-left: auto;
+    width: 20%;
+}
+
+.logo img {
+    width: 70%;
+    height: auto;
+}
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+.education {
     flex-direction: column;
     width: 100%;
-    padding-bottom: 5%;
 }
 
-.scolar > h1 {
-    margin-bottom: 5%;
+.education-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
-.scolar > article,
-.scolar > div {
-    display: flex; /* essentiel pour align-items */
+.education-description {
+    display: flex;
+    flex: 3;
+    height: 100%;
+    flex-direction: column;
+}
+
+.education-button {
+    display: flex;
     flex: 1;
-    text-align: left;
-    align-items: center; /* centre verticalement le contenu */
-    width: auto;
-    padding-left: 10%;
-    padding-right: 10%;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.scolar span {
+.education-description article {
+    display: flex;
+    flex: 1;
+    height: auto;
+    align-items: center;
+    padding-left: 30%;
+}
+
+.education-description article:nth-child(1) {
+    padding-left: 15%;
+}
+
+.education-button a {
+    display: flex;
+    flex: 1;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-button a {
+    width: 80%;
+    margin: 0;
+}
+
+.education-description span {
     padding-right: 5%;
     font-size: 1.1rem; /* Taille un peu plus petite que le titre */
     font-weight: bold; /* Mettre en valeur la période */
@@ -123,35 +168,6 @@ section p {
     letter-spacing: 1px; /* Espacement léger */
 }
 
-.scolar > div {
-    flex: 3;
-    flex-direction: column;
-}
-
-.scolar > div > article {
-    display: flex;
-    flex: 1;
-    text-align: left;
-    align-items: center;
-    width: auto;
-    padding-left: 10%;
-    padding-right: 5%;
-}
-
-.scolar p {
+.education-description p {
     font-size: 1.2rem; /* Taille standard du texte */
-}
-
-.logo {
-    margin-left: auto;
-    width: 20%;
-}
-
-.logo img {
-    width: 100%;
-    height: auto;
-}
-
-.logo:hover img {
-    transform: scale(1.1);
 }
